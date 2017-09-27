@@ -1,0 +1,26 @@
+*{
+    font-family:sans-serif;
+}
+body{margin:0;}
+
+main{
+    width: 80%;
+    max-width: 800px;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    margin:auto;
+    min-height:100vh;
+}
+header{
+    display:flex;
+    flex-direction:column;
+    text-align:Center;
+    border-bottom:2px solid black;
+}
+h1{
+    font-size:3em;
+    margin:auto;
+}
+section{
+    padding:0px 30px;
+}
