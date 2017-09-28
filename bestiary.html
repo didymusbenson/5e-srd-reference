@@ -19,12 +19,13 @@
                 <p>Not the first, wont be the last, probably not the best, but here you are.</p>
             </header>
             <script id="template" type="text/x-handlebars-template">
+            <div class="cards">
             {{#each this}}
-                <div class="row">
-                    <p>Creature: {{Creature}}</p>
-                    <p>Challenge Rating: {{CR}}</p>
+                <div class="card">
+                    <p>{{Creature}}</p>
                 </div>
-{{/each}}
+            {{/each}}
+                </div>
             </script>
             <section id="options">
                 <button onclick="sort('cr')">sort by challenge rating</button>
