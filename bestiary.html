@@ -19,17 +19,34 @@
                 <p>Not the first, wont be the last, probably not the best, but here you are.</p>
             </header>
             <script id="template" type="text/x-handlebars-template">
-            <div class="cards">
-            {{#each this}}
-                <div class="card">
-                    <p>{{Creature}}</p>
-                </div>
-            {{/each}}
+                <div class="cards">
+                    {{#each this}}
+                    <div class="card">
+                        <p>{{Creature}}, {{CR}}, {{Type}}</p>
+                    </div>
+                    {{/each}}
                 </div>
             </script>
             <section id="options">
-                <button onclick="sort('cr')">sort by challenge rating</button>
-                <button onclick="sort('Creature')">sort alphabetically</button>
+                <div class="menu">
+                    <p>General sorts:</p>
+                    <button onclick="sort('crl')">sort by challenge rating (low-high)</button>
+                    <button onclick="sort('crh')">sort by challenge rating (high-low)</button>
+                    <button onclick="sort('Creature')">sort alphabetically</button>
+                </div>
+                <div class="menu">
+                    <p>Get by Type: </p>
+                    <button onclick="filtersort('Humanoid')">Humanoids</button>
+                    <button onclick="filtersort('Dragon')">Dragons</button>
+                    <button onclick="filtersort('Abberation')">Undead</button>
+                    <button onclick="filtersort('Monstrosity')">Undead</button>
+                    <button onclick="filtersort('Elemental')">Undead</button>
+                    <button onclick="filtersort('Beast')">Undead</button>
+                    <button onclick="filtersort('Construct')">Undead</button>
+                    <button onclick="filtersort('Undead')">Undead</button>
+                    <button onclick="filtersort('Undead')">Undead</button>
+
+                </div>
             </section>
             <section id="mons">
 

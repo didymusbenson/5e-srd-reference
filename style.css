@@ -27,11 +27,7 @@ section{
     padding:0px 30px;
 }
 
-.card{
-    border:2px solid black;
-}
-
-
+/*******************************************/
 .cards{display:flex;flex-flow:row wrap;}
 .card:hover{box-shadow:0px 0px 3px 2px #FF2442; transition:0.2s ease-out; transform: scale(1.05);}
 .card{
@@ -50,5 +46,6 @@ section{
 .card-title h3{margin:5px;font-family:'Yellowtail';font-size:30px; color:#FF2442;font-weight:bold;}
 .card-display p{margin:10px;text-align:left;}
 .card a{text-decoration:none; color:white;}
-
-
+/*******************************************/
+.menu p{display:inline-block;}
+.menu{clear:both;}

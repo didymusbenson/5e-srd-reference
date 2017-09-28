@@ -17,11 +17,20 @@ fileData.onreadystatechange = function () {
             })
             // Build initial page;
             makeUI(monsters);
+            console.log(gettypes(monsters));
         }
     }
 }
 fileData.send(null);
 
+
+function gettypes(arr){
+    var alltypes = [];
+    for (var i = 0; i < arr.length; i++){
+        alltypes.push(arr[i].Type);
+    }
+    return Array.from(new Set(alltypes));
+}
 
 function makeUI(data) {
     console.log(data);
@@ -31,9 +40,14 @@ function makeUI(data) {
 
 function sort(option){
     switch (option){
-        case 'cr':
+        case 'crl':
             makeUI(monsters.sort(function(a,b){
                 return a.CR - b.CR;
+            }));
+            break;
+        case 'crh':
+            makeUI(monsters.sort(function(a,b){
+                return b.CR - a.CR;
             }));
             break;
         case 'Creature':
@@ -51,3 +65,13 @@ function sort(option){
             break;
     }
 }
+
+function filtersort(option){
+
+    var filtered_monsters = [];
+
+     makeUI(monsters.filter(function(monster){
+                return option.indexOf(monster.Type) > -1;
+            }));
+}
+
